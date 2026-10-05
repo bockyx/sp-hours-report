@@ -72,12 +72,8 @@
     "EXPORT": "Export"
   },
   "CSV": {
-    "TITLE": "CSV (Excel, Google Sheets)",
-    "DOWNLOAD": "Download CSV",
+    "TITLE": "CSV",
     "COPY": "Copy CSV",
-    "SAVED": "Saved",
-    "FAILED": "Could not save the file. Use Copy CSV and paste it into a spreadsheet.",
-    "HINT": "One row per project, day and task (date, project, task, decimal hours and h:mm), with the rounding and selected projects applied. Opens in Excel and Google Sheets.",
-    "SAVED_HINT": "Downloaded as {name}. Look in your browser or system downloads folder; if it does not appear, use Copy CSV."
+    "HINT": "One row per project, day and task (date, project, task, decimal hours and h:mm), with the rounding and selected projects applied. Copy it and paste into Excel or Google Sheets, or save it as .csv."
   }
 }

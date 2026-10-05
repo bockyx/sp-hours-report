@@ -10,5 +10,5 @@
   "iFrame": true,
   "sidePanel": false,
   "hooks": [],
-  "permissions": ["getTasks", "getArchivedTasks", "getAllProjects", "showSnack", "downloadFile", "persistDataSynced", "loadSyncedData", "showIndexHtmlAsView"]
+  "permissions": ["getTasks", "getArchivedTasks", "getAllProjects", "showSnack", "persistDataSynced", "loadSyncedData", "showIndexHtmlAsView"]
 }
