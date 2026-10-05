@@ -66,5 +66,9 @@
     "EDITABLE_LABEL": "Markdown editable",
     "DISCORD_TITLE": "Para Discord",
     "DISCORD_HINT": "Discord no muestra tablas, así que aquí las tareas van como lista con negritas. Se genera desde el Markdown de arriba, con tus ediciones."
+  },
+  "TABS": {
+    "REPORT": "Reporte",
+    "EXPORT": "Exportar"
   }
 }

@@ -4,4 +4,5 @@ export const state = {
   tasks: [],
   projectsById: {},
   month: "",
+  tab: "report", // "report" | "export"
 };

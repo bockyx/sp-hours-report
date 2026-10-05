@@ -1,3 +1,4 @@
+import { state } from "./state.js";
 import { MONTHS, $, esc, hm, dn, pad, tint } from "./utils.js";
 import { t, monthShort, weekdayShortMon, weekdayShortOf } from "./i18n.js";
 import { api } from "./api.js";
@@ -54,11 +55,20 @@ export function renderBody(all,y,mo){
     `</tbody></table></div></section>`;
   }
 
+  const reportHtml=h;
+
   // markdown
   const md=buildMd(title,all);
-  h+=`<section><h2>${t("MARKDOWN.TITLE")}</h2><div class="mdbar"><button class="btn-primary" id="copy">${t("MARKDOWN.COPY")}</button><button class="btn-primary" id="copyd">${t("MARKDOWN.COPY_DISCORD")}</button><button id="sel">${t("MARKDOWN.SELECT_ALL")}</button><button id="reset" disabled>${t("MARKDOWN.RESET")}</button><span class="muted" id="cmsg"></span></div>
+  const exportHtml=`<section><h2>${t("MARKDOWN.TITLE")}</h2><div class="mdbar"><button class="btn-primary" id="copy">${t("MARKDOWN.COPY")}</button><button class="btn-primary" id="copyd">${t("MARKDOWN.COPY_DISCORD")}</button><button id="sel">${t("MARKDOWN.SELECT_ALL")}</button><button id="reset" disabled>${t("MARKDOWN.RESET")}</button><span class="muted" id="cmsg"></span></div>
     <div class="mdgrid"><textarea id="md" spellcheck="false" aria-label="${esc(t("MARKDOWN.EDITABLE_LABEL"))}">${esc(md)}</textarea><div class="mdprev" id="prev">${mdToHtml(md)}</div></div><h3>${t("MARKDOWN.DISCORD_TITLE")}</h3><p class="muted">${t("MARKDOWN.DISCORD_HINT")}</p><pre class="dtxt" id="dtxt"></pre></section>`;
-  $("out").innerHTML=h;
+  const pane=(id,html)=>`<div class="pane" id="pane-${id}"${state.tab===id?"":" hidden"}>${html}</div>`;
+  const tab=id=>`<button class="tab" role="tab" data-tab="${id}" aria-selected="${state.tab===id}">${t("TABS."+id.toUpperCase())}</button>`;
+  $("out").innerHTML=`<div class="tabs" role="tablist">${tab("report")}${tab("export")}</div>`+pane("report",reportHtml)+pane("export",exportHtml);
+  $("out").querySelectorAll(".tab").forEach(b=>b.addEventListener("click",()=>{
+    state.tab=b.dataset.tab;
+    $("out").querySelectorAll(".tab").forEach(x=>x.setAttribute("aria-selected",String(x===b)));
+    for(const id of ["report","export"]) $("pane-"+id).hidden=state.tab!==id;
+  }));
 
   const ta=$("md"), prev=$("prev"), rs=$("reset");
   const showD=()=>{$("dtxt").textContent=discordFrom(ta.value);};

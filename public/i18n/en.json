@@ -66,5 +66,9 @@
     "EDITABLE_LABEL": "Editable Markdown",
     "DISCORD_TITLE": "For Discord",
     "DISCORD_HINT": "Discord does not render tables, so tasks are listed here with bold hours. Generated from the Markdown above, including your edits."
+  },
+  "TABS": {
+    "REPORT": "Report",
+    "EXPORT": "Export"
   }
 }
