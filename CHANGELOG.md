@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2.0](///compare/v1.1.0...v1.2.0) (2026-10-05)
+
+### Features
+
+* group csv rows by project ab70a16
+
+### Bug Fixes
+
+* replace csv download with copy and a selectable preview 0342ee7
+* tell the user the csv file name and where to look after downloading 8b42cbd
+
 ## [1.1.0](///compare/v1.0.2...v1.1.0) (2026-10-05)
 
 ### Features
