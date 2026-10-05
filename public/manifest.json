@@ -1,8 +1,8 @@
 {
-  "id": "asd-hours-report",
-  "name": "Reporte de horas ASD Media",
+  "id": "sp-hours-report",
+  "name": "SP Hours Report",
   "version": "1.0.0",
-  "description": "Suma las horas del mes por proyecto y tarea, y genera el Markdown del reporte con botón para copiarlo a Discord.",
+  "description": "Sums the month's hours by project and task, and generates a Markdown report with a button to copy it for Discord.",
   "manifestVersion": 1,
   "minSupVersion": "14.0.0",
   "icon": "icon.svg",

@@ -1,1 +1,1 @@
-console.log('Reporte de horas ASD Media cargado');
+console.log('Report hours loaded');

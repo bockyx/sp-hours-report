@@ -2,7 +2,7 @@ import { esc, hmMd } from "./utils.js";
 
 export function buildMd(title,all){
   const grand=all.reduce((a,x)=>a+x.s.total,0);
-  let md=`# ASD Media — Hours Report, ${title}\n\n**Total: ${hmMd(grand)} h**\n\n`;
+  let md=`# Hours Report, ${title}\n\n**Total: ${hmMd(grand)} h**\n\n`;
   md+=`| Project | Hours |\n|---|---:|\n`+all.map(x=>`| ${x.name} | ${hmMd(x.s.total)} |`).join("\n")+`\n| **Total** | **${hmMd(grand)}** |\n`;
   for(const x of all){
     md+=`\n## ${x.name} — ${hmMd(x.s.total)} h\n\n| Task | Hours |\n|---|---:|\n`;

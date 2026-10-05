@@ -2,7 +2,7 @@
   "HEADER": {
     "EYEBROW": "Hours report",
     "RANGE": "Hours report · {month} {year}",
-    "TITLE": "ASD Media hours",
+    "TITLE": "Hours report",
     "SUBTITLE": "Reads the hours tracked in Super Productivity, including archived tasks."
   },
   "CONTROLS": {
@@ -31,7 +31,7 @@
     "READ_TASKS": "Could not read tasks: {error}"
   },
   "SUMMARY": {
-    "TOTAL": "Total ASD Media",
+    "TOTAL": "Total",
     "DAYS_LOGGED": "{n} days with tracked hours",
     "PROJECT_SUB": "{days} days · {pct}% of total"
   },
