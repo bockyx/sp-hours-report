@@ -1,0 +1,12 @@
+.controls{display:grid;gap:14px;background:var(--r-card);border:1px solid var(--r-line);border-radius:12px;padding:16px}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.row label{display:inline-flex;gap:8px;align-items:center}
+.month{display:inline-flex;gap:4px;align-items:center}
+.month input,.row select{font:inherit;padding:5px 8px;border:1px solid var(--r-line);border-radius:6px;background:var(--r-bg);color:var(--r-fg)}
+.iconbtn{min-width:32px;padding:4px 8px}
+.pchips{display:flex;gap:8px;flex-wrap:wrap}
+.pchip{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--r-line);border-radius:999px;padding:3px 6px 3px 10px;font-size:13px}
+.pchip.off{opacity:.5}
+.pchip input[type=text]{font:inherit;border:1px solid var(--r-line);background:var(--r-bg);color:var(--r-fg);border-radius:6px;padding:2px 6px;width:170px}
+.pchip .h{font-family:var(--mono);color:var(--r-muted)}
+.dot{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px;flex:none}

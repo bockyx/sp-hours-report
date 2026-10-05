@@ -1,0 +1,19 @@
+/* Usa las variables de tema de Super Productivity, con valores de respaldo */
+:root{
+  --r-bg:var(--bg,#f6f7f9); --r-card:var(--card-bg,#fff); --r-fg:var(--text-color,#1b2230);
+  --r-muted:var(--text-color-muted,#5d6678); --r-line:var(--divider-color,#dfe3ea);
+  --r-accent:var(--c-primary,#2f5bd3); --r-empty:color-mix(in srgb,var(--r-fg) 6%,transparent);
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--r-bg);color:var(--r-fg);font-family:var(--font-primary-stack,system-ui,sans-serif);font-size:14px;line-height:1.5}
+.wrap{max-width:980px;margin:0 auto;padding:24px 16px 56px;display:grid;gap:32px}
+h1,h2,h3{margin:0;font-weight:650;line-height:1.2}
+h1{font-size:30px} h2{font-size:21px} h3{font-size:16px}
+.eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--r-muted);font-weight:600}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.muted{color:var(--r-muted);font-size:13px;margin:0}
+.msg{color:var(--c-warn,#b3261e);font-size:13px;margin:0}
+header{display:grid;gap:6px}
+section{display:grid;gap:14px}
+button{font:inherit;cursor:pointer}

@@ -1,0 +1,7 @@
+.cal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+.cal .dow{font-size:12px;color:var(--r-muted);text-align:center;font-weight:600}
+.day{background:var(--r-card);border:1px solid var(--r-line);border-radius:8px;min-height:80px;padding:6px 8px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.day.blank{background:transparent;border-color:transparent} .day.off{background:var(--r-empty);border-color:transparent}
+.day .d{font-size:12px;color:var(--r-muted)} .day .h{font-family:var(--mono);font-size:14px;font-weight:500}
+.day .bars{margin-top:auto;display:flex;gap:2px;flex-wrap:wrap} .day .bars i{display:block;width:12px;height:8px;border-radius:2px}
+@media (max-width:560px){.day{min-height:60px;padding:4px 5px}.day .h{font-size:12px}.day .bars i{width:7px;height:6px}}

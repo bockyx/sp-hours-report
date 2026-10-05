@@ -1,0 +1,6 @@
+.summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
+.stat{background:var(--r-card);border:1px solid var(--r-line);border-radius:10px;padding:18px;display:grid;gap:6px;align-content:start;min-width:0}
+.stat .big{font-size:38px;line-height:1;font-weight:650;font-variant-numeric:tabular-nums}
+.stat .sub{color:var(--r-muted);font-size:13px}
+.split{display:flex;height:10px;border-radius:5px;overflow:hidden;margin-top:8px;background:var(--r-empty)}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--r-muted)}
