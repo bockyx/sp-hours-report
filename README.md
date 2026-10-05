@@ -14,6 +14,12 @@ A [Super Productivity](https://super-productivity.com) plugin that sums the mont
   - CSV, grouped by project, to paste into Excel or Google Sheets.
 - Interface in English and Spanish, following the app language.
 
+## Preview
+
+![Report tab: totals per project, calendar and weekly breakdown](docs/screenshots/01.webp)
+
+![Export tab: CSV, Markdown and plain-text export](docs/screenshots/02.webp)
+
 ## Install
 
 1. Run `pnpm install` and `pnpm package`.
