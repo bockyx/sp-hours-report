@@ -1,0 +1,13 @@
+{
+  "id": "asd-hours-report",
+  "name": "Reporte de horas ASD Media",
+  "version": "1.0.0",
+  "description": "Suma las horas del mes por proyecto y tarea, y genera el Markdown del reporte con botón para copiarlo a Discord.",
+  "manifestVersion": 1,
+  "minSupVersion": "14.0.0",
+  "icon": "icon.svg",
+  "iFrame": true,
+  "sidePanel": false,
+  "hooks": [],
+  "permissions": ["getTasks", "getArchivedTasks", "getAllProjects", "showSnack", "persistDataSynced", "loadSyncedData", "showIndexHtmlAsView"]
+}
