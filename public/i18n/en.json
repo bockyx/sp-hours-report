@@ -1,0 +1,70 @@
+{
+  "HEADER": {
+    "EYEBROW": "Hours report",
+    "RANGE": "Hours report · {month} {year}",
+    "TITLE": "ASD Media hours",
+    "SUBTITLE": "Reads the hours tracked in Super Productivity, including archived tasks."
+  },
+  "CONTROLS": {
+    "PREV_MONTH": "Previous month",
+    "NEXT_MONTH": "Next month",
+    "MONTH": "Month",
+    "ROUNDING": "Rounding",
+    "ROUND_NONE": "No rounding",
+    "ROUND_15": "Round up to 15 min",
+    "ROUND_30": "Round up to 30 min",
+    "ROUND_60": "Round up to 1 h",
+    "REFRESH": "Refresh",
+    "HINT": "Rounding is applied to each task on each day. Uncheck a project to remove it from the report, and edit its name if you want a different one in the Markdown."
+  },
+  "PROJECT": {
+    "NONE": "No project",
+    "INCLUDE": "Include {name}",
+    "REPORT_NAME": "Project name in the report"
+  },
+  "EMPTY": {
+    "NO_SELECTION": "No projects selected.",
+    "NO_HOURS": "No hours tracked in {month} {year}."
+  },
+  "ERROR": {
+    "NO_API": "Could not find the Super Productivity plugin API.",
+    "READ_TASKS": "Could not read tasks: {error}"
+  },
+  "SUMMARY": {
+    "TOTAL": "Total ASD Media",
+    "DAYS_LOGGED": "{n} days with tracked hours",
+    "PROJECT_SUB": "{days} days · {pct}% of total"
+  },
+  "CALENDAR": {
+    "TITLE": "Calendar",
+    "LEGEND": "{name} (1 bar = 1 h)"
+  },
+  "WEEKS": {
+    "TITLE": "By week",
+    "WEEK": "Week"
+  },
+  "TABLE": {
+    "TOTAL": "Total",
+    "TASKS": "Tasks",
+    "TASK": "Task",
+    "DAYS": "Days",
+    "HOURS": "Hours",
+    "DAY_DETAIL": "Detail by day",
+    "DATE": "Date",
+    "UNTITLED": "(untitled)"
+  },
+  "MARKDOWN": {
+    "TITLE": "Markdown (English)",
+    "COPY": "Copy Markdown",
+    "COPY_DISCORD": "Copy for Discord",
+    "SELECT_ALL": "Select all",
+    "RESET": "Reset",
+    "EDITED": "Edited, totals are recalculated automatically. Reset goes back to the generated text.",
+    "COPIED": "Copied",
+    "COPIED_SNACK": "Copied to clipboard",
+    "COPY_FAILED": "Could not copy. The text is selected, use Ctrl/Cmd+C.",
+    "EDITABLE_LABEL": "Editable Markdown",
+    "DISCORD_TITLE": "For Discord",
+    "DISCORD_HINT": "Discord does not render tables, so tasks are listed here with bold hours. Generated from the Markdown above, including your edits."
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "HEADER": {
+    "EYEBROW": "Reporte de horas",
+    "RANGE": "Reporte de horas · {month} de {year}",
+    "TITLE": "Horas ASD Media",
+    "SUBTITLE": "Lee las horas registradas en Super Productivity, incluidas las tareas archivadas."
+  },
+  "CONTROLS": {
+    "PREV_MONTH": "Mes anterior",
+    "NEXT_MONTH": "Mes siguiente",
+    "MONTH": "Mes",
+    "ROUNDING": "Redondeo",
+    "ROUND_NONE": "Sin redondeo",
+    "ROUND_15": "15 min hacia arriba",
+    "ROUND_30": "30 min hacia arriba",
+    "ROUND_60": "1 h hacia arriba",
+    "REFRESH": "Actualizar",
+    "HINT": "El redondeo se aplica a cada tarea en cada día. Desmarca un proyecto para quitarlo del reporte y edita su nombre si quieres otro en el Markdown."
+  },
+  "PROJECT": {
+    "NONE": "Sin proyecto",
+    "INCLUDE": "Incluir {name}",
+    "REPORT_NAME": "Nombre del proyecto en el reporte"
+  },
+  "EMPTY": {
+    "NO_SELECTION": "No hay proyectos seleccionados.",
+    "NO_HOURS": "No hay horas registradas en {month} de {year}."
+  },
+  "ERROR": {
+    "NO_API": "No encontré la API de plugins de Super Productivity.",
+    "READ_TASKS": "No pude leer las tareas: {error}"
+  },
+  "SUMMARY": {
+    "TOTAL": "Total ASD Media",
+    "DAYS_LOGGED": "{n} días con horas registradas",
+    "PROJECT_SUB": "{days} días · {pct}% del total"
+  },
+  "CALENDAR": {
+    "TITLE": "Calendario",
+    "LEGEND": "{name} (1 barra = 1 h)"
+  },
+  "WEEKS": {
+    "TITLE": "Por semana",
+    "WEEK": "Semana"
+  },
+  "TABLE": {
+    "TOTAL": "Total",
+    "TASKS": "Tareas",
+    "TASK": "Tarea",
+    "DAYS": "Días",
+    "HOURS": "Horas",
+    "DAY_DETAIL": "Detalle por día",
+    "DATE": "Fecha",
+    "UNTITLED": "(sin título)"
+  },
+  "MARKDOWN": {
+    "TITLE": "Markdown en inglés",
+    "COPY": "Copiar Markdown",
+    "COPY_DISCORD": "Copiar para Discord",
+    "SELECT_ALL": "Seleccionar todo",
+    "RESET": "Restablecer",
+    "EDITED": "Editado, los totales se recalculan solos. Restablecer vuelve al texto generado.",
+    "COPIED": "Copiado",
+    "COPIED_SNACK": "Copiado al portapapeles",
+    "COPY_FAILED": "No se pudo copiar. El texto quedó seleccionado, usa Ctrl/Cmd+C.",
+    "EDITABLE_LABEL": "Markdown editable",
+    "DISCORD_TITLE": "Para Discord",
+    "DISCORD_HINT": "Discord no muestra tablas, así que aquí las tareas van como lista con negritas. Se genera desde el Markdown de arriba, con tus ediciones."
+  }
+}

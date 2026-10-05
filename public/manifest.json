@@ -6,6 +6,7 @@
   "manifestVersion": 1,
   "minSupVersion": "14.0.0",
   "icon": "icon.svg",
+  "i18n": { "languages": ["es", "en"] },
   "iFrame": true,
   "sidePanel": false,
   "hooks": [],
