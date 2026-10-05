@@ -2,7 +2,7 @@
   "id": "sp-hours-report",
   "name": "SP Hours Report",
   "version": "1.0.0",
-  "description": "Sums the month's hours by project and task, and generates a Markdown report with a button to copy it for Discord.",
+  "description": "Sums the month's hours by project and task, and generates a Markdown report with a button to copy it.",
   "manifestVersion": 1,
   "minSupVersion": "14.0.0",
   "icon": "icon.svg",
