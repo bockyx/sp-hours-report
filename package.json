@@ -1,6 +1,6 @@
 {
   "name": "sp-hours-report",
-  "version": "1.0.1-alpha.0",
+  "version": "1.0.1",
   "private": true,
   "type": "module",
   "scripts": {
