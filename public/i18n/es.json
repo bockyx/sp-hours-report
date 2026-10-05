@@ -77,6 +77,7 @@
     "COPY": "Copiar CSV",
     "SAVED": "Guardado",
     "FAILED": "No se pudo guardar el archivo. Usa Copiar CSV y pégalo en una hoja de cálculo.",
-    "HINT": "Una fila por proyecto, día y tarea (fecha, proyecto, tarea, horas decimales y h:mm), con el redondeo y los proyectos seleccionados. Se abre en Excel y Google Sheets."
+    "HINT": "Una fila por proyecto, día y tarea (fecha, proyecto, tarea, horas decimales y h:mm), con el redondeo y los proyectos seleccionados. Se abre en Excel y Google Sheets.",
+    "SAVED_HINT": "Descargado como {name}. Búscalo en la carpeta de descargas de tu navegador o sistema; si no aparece, usa Copiar CSV."
   }
 }

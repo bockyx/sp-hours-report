@@ -98,8 +98,8 @@ export function renderBody(all,y,mo){
   wire("copyd",t("MARKDOWN.COPY_DISCORD"),()=>discordFrom(ta.value),()=>{const r=document.createRange();r.selectNodeContents($("dtxt"));const s=getSelection();s.removeAllRanges();s.addRange(r);});
   wire("copycsv",t("CSV.COPY"),()=>csv,()=>{});
   $("dlcsv").onclick=async()=>{
-    const b=$("dlcsv"), ok=await saveFile(`hours-${state.month}.csv`,csv,api);
-    $("csvmsg").textContent=ok?"":t("CSV.FAILED");
+    const b=$("dlcsv"), name=`hours-${state.month}.csv`, ok=await saveFile(name,csv,api);
+    $("csvmsg").textContent=ok?t("CSV.SAVED_HINT",{name}):t("CSV.FAILED");
     if(ok){b.textContent=t("CSV.SAVED");b.classList.add("btn-ok");setTimeout(()=>{b.textContent=t("CSV.DOWNLOAD");b.classList.remove("btn-ok");},2000);}
   };
   showD();
