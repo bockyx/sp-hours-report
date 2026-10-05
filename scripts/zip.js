@@ -1,6 +1,10 @@
-// Empaqueta dist/ en dist/plugin.zip para subirlo a Super Productivity.
+// Empaqueta dist/ en dist/<name>-<version>.zip para subirlo a Super Productivity.
 import { execFileSync } from "node:child_process";
-import { rmSync } from "node:fs";
+import { readFileSync, readdirSync, rmSync } from "node:fs";
 
-rmSync("dist/plugin.zip", { force: true });
-execFileSync("zip", ["-r", "plugin.zip", ".", "-x", "plugin.zip"], { cwd: "dist", stdio: "inherit" });
+const { name, version } = JSON.parse(readFileSync("package.json", "utf8"));
+const zip = `${name}-${version}.zip`;
+
+for (const f of readdirSync("dist")) if (f.endsWith(".zip")) rmSync(`dist/${f}`);
+execFileSync("zip", ["-r", zip, ".", "-x", "*.zip"], { cwd: "dist", stdio: "inherit" });
+console.log(`dist/${zip}`);

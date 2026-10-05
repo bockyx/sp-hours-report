@@ -23,7 +23,7 @@ A [Super Productivity](https://super-productivity.com) plugin that sums the mont
 ## Install
 
 1. Run `pnpm install` and `pnpm package`.
-2. In Super Productivity, go to **Settings → Plugins** and upload `dist/plugin.zip`.
+2. In Super Productivity, go to **Settings → Plugins** and upload the ZIP from `dist/` (`sp-hours-report-<version>.zip`).
 
 ## Development
 
@@ -32,7 +32,7 @@ Requires Node.js and [pnpm](https://pnpm.io).
 ```sh
 pnpm install
 pnpm build      # builds dist/
-pnpm package    # builds dist/ and creates dist/plugin.zip
+pnpm package    # builds dist/ and creates dist/sp-hours-report-<version>.zip
 ```
 
 Super Productivity serves the plugin's `index.html` through `srcdoc`, so extra files from the ZIP are not available to the iframe. Vite with `vite-plugin-singlefile` inlines all JS and CSS into a single `index.html`. The version in `dist/manifest.json` is taken from `package.json`.
@@ -46,7 +46,7 @@ index.html            Vite entry
 src/js/               ES modules (api, data, i18n, markdown, csv, render, report, main)
 src/styles/           CSS split by area
 public/               Copied as is to dist/: manifest.json, plugin.js, icon.svg, i18n/
-scripts/zip.js        Creates dist/plugin.zip
+scripts/zip.js        Creates dist/sp-hours-report-<version>.zip
 ```
 
 ### Translations
