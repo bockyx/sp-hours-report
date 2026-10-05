@@ -70,5 +70,13 @@
   "TABS": {
     "REPORT": "Reporte",
     "EXPORT": "Exportar"
+  },
+  "CSV": {
+    "TITLE": "CSV (Excel, Google Sheets)",
+    "DOWNLOAD": "Descargar CSV",
+    "COPY": "Copiar CSV",
+    "SAVED": "Guardado",
+    "FAILED": "No se pudo guardar el archivo. Usa Copiar CSV y pégalo en una hoja de cálculo.",
+    "HINT": "Una fila por proyecto, día y tarea (fecha, proyecto, tarea, horas decimales y h:mm), con el redondeo y los proyectos seleccionados. Se abre en Excel y Google Sheets."
   }
 }
