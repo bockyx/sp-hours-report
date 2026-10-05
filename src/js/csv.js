@@ -2,12 +2,12 @@ import { hm } from "./utils.js";
 
 const cell = (v) => (/[",\r\n]/.test(v) ? `"${String(v).replace(/"/g, '""')}"` : String(v));
 
-// Una fila por proyecto, día y tarea. Encabezados en inglés, igual que el Markdown.
+// Una fila por proyecto, día y tarea, agrupadas por proyecto (mismo orden que el reporte) y por fecha.
+// Encabezados en inglés, igual que el Markdown.
 export function buildCsv(all) {
   const rows = [];
   for (const x of all) for (const r of x.rows) for (const it of r.items) {
-    rows.push([r.date, x.name, it.title, (it.min / 60).toFixed(2), hm(it.min)]);
+    rows.push([x.name, r.date, it.title, (it.min / 60).toFixed(2), hm(it.min)]);
   }
-  rows.sort((a, b) => a[0].localeCompare(b[0]) || a[1].localeCompare(b[1]) || a[2].localeCompare(b[2]));
-  return [["Date", "Project", "Task", "Hours", "Time"], ...rows].map((r) => r.map(cell).join(",")).join("\r\n") + "\r\n";
+  return [["Project", "Date", "Task", "Hours", "Time"], ...rows].map((r) => r.map(cell).join(",")).join("\r\n") + "\r\n";
 }
