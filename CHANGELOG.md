@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.1.0](///compare/v1.0.2...v1.1.0) (2026-10-05)
+
+### Features
+
+* add csv export with download and copy 3915747
+
+### Bug Fixes
+
+* update description in manifest.json for clarity 16122bf
+
 ## [1.0.2](///compare/v1.0.1...v1.0.2) (2026-10-05)
 
 ### Features
