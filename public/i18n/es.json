@@ -56,7 +56,6 @@
   "MARKDOWN": {
     "TITLE": "Markdown en inglés",
     "COPY": "Copiar Markdown",
-    "COPY_DISCORD": "Copiar para Discord",
     "SELECT_ALL": "Seleccionar todo",
     "RESET": "Restablecer",
     "EDITED": "Editado, los totales se recalculan solos. Restablecer vuelve al texto generado.",
@@ -64,8 +63,9 @@
     "COPIED_SNACK": "Copiado al portapapeles",
     "COPY_FAILED": "No se pudo copiar. El texto quedó seleccionado, usa Ctrl/Cmd+C.",
     "EDITABLE_LABEL": "Markdown editable",
-    "DISCORD_TITLE": "Para Discord",
-    "DISCORD_HINT": "Discord no muestra tablas, así que aquí las tareas van como lista con negritas. Se genera desde el Markdown de arriba, con tus ediciones."
+    "COPY_TEXT": "Copiar como texto plano",
+    "TEXT_TITLE": "Texto plano",
+    "TEXT_HINT": "Versión sin tablas, útil para chats y editores que no las muestran (Discord, Slack, etc.): las tareas van como lista con negritas. Se genera desde el Markdown de arriba, con tus ediciones."
   },
   "TABS": {
     "REPORT": "Reporte",

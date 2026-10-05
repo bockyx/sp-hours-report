@@ -56,7 +56,6 @@
   "MARKDOWN": {
     "TITLE": "Markdown (English)",
     "COPY": "Copy Markdown",
-    "COPY_DISCORD": "Copy for Discord",
     "SELECT_ALL": "Select all",
     "RESET": "Reset",
     "EDITED": "Edited, totals are recalculated automatically. Reset goes back to the generated text.",
@@ -64,8 +63,9 @@
     "COPIED_SNACK": "Copied to clipboard",
     "COPY_FAILED": "Could not copy. The text is selected, use Ctrl/Cmd+C.",
     "EDITABLE_LABEL": "Editable Markdown",
-    "DISCORD_TITLE": "For Discord",
-    "DISCORD_HINT": "Discord does not render tables, so tasks are listed here with bold hours. Generated from the Markdown above, including your edits."
+    "COPY_TEXT": "Copy as plain text",
+    "TEXT_TITLE": "Plain text",
+    "TEXT_HINT": "A table-free version for chats and editors that do not render tables (Discord, Slack, etc.): tasks are listed with bold hours. Generated from the Markdown above, including your edits."
   },
   "TABS": {
     "REPORT": "Report",

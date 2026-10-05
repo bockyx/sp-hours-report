@@ -2,7 +2,7 @@ import { state } from "./state.js";
 import { MONTHS, $, esc, hm, dn, pad, tint } from "./utils.js";
 import { t, monthShort, weekdayShortMon, weekdayShortOf } from "./i18n.js";
 import { api } from "./api.js";
-import { buildMd, recalcMd, discordFrom, mdToHtml } from "./markdown.js";
+import { buildMd, recalcMd, plainTextFrom, mdToHtml } from "./markdown.js";
 import { copyText } from "./clipboard.js";
 import { buildCsv } from "./csv.js";
 
@@ -62,8 +62,8 @@ export function renderBody(all,y,mo){
   const md=buildMd(title,all);
   const csv=buildCsv(all);
   const exportHtml=`<section><h2>${t("CSV.TITLE")}</h2><div class="mdbar"><button class="btn-primary" id="copycsv">${t("CSV.COPY")}</button></div><p class="muted">${t("CSV.HINT")}</p><textarea id="csv" readonly spellcheck="false" style="min-height:140px" aria-label="CSV">${esc(csv)}</textarea></section>
-  <section><h2>${t("MARKDOWN.TITLE")}</h2><div class="mdbar"><button class="btn-primary" id="copy">${t("MARKDOWN.COPY")}</button><button class="btn-primary" id="copyd">${t("MARKDOWN.COPY_DISCORD")}</button><button id="sel">${t("MARKDOWN.SELECT_ALL")}</button><button id="reset" disabled>${t("MARKDOWN.RESET")}</button><span class="muted" id="cmsg"></span></div>
-    <div class="mdgrid"><textarea id="md" spellcheck="false" aria-label="${esc(t("MARKDOWN.EDITABLE_LABEL"))}">${esc(md)}</textarea><div class="mdprev" id="prev">${mdToHtml(md)}</div></div><h3>${t("MARKDOWN.DISCORD_TITLE")}</h3><p class="muted">${t("MARKDOWN.DISCORD_HINT")}</p><pre class="dtxt" id="dtxt"></pre></section>`;
+  <section><h2>${t("MARKDOWN.TITLE")}</h2><div class="mdbar"><button class="btn-primary" id="copy">${t("MARKDOWN.COPY")}</button><button class="btn-primary" id="copyd">${t("MARKDOWN.COPY_TEXT")}</button><button id="sel">${t("MARKDOWN.SELECT_ALL")}</button><button id="reset" disabled>${t("MARKDOWN.RESET")}</button><span class="muted" id="cmsg"></span></div>
+    <div class="mdgrid"><textarea id="md" spellcheck="false" aria-label="${esc(t("MARKDOWN.EDITABLE_LABEL"))}">${esc(md)}</textarea><div class="mdprev" id="prev">${mdToHtml(md)}</div></div><h3>${t("MARKDOWN.TEXT_TITLE")}</h3><p class="muted">${t("MARKDOWN.TEXT_HINT")}</p><pre class="dtxt" id="dtxt"></pre></section>`;
   const pane=(id,html)=>`<div class="pane" id="pane-${id}"${state.tab===id?"":" hidden"}>${html}</div>`;
   const tab=id=>`<button class="tab" role="tab" data-tab="${id}" aria-selected="${state.tab===id}">${t("TABS."+id.toUpperCase())}</button>`;
   $("out").innerHTML=`<div class="tabs" role="tablist">${tab("report")}${tab("export")}</div>`+pane("report",reportHtml)+pane("export",exportHtml);
@@ -74,7 +74,7 @@ export function renderBody(all,y,mo){
   }));
 
   const ta=$("md"), prev=$("prev"), rs=$("reset");
-  const showD=()=>{$("dtxt").textContent=discordFrom(ta.value);};
+  const showD=()=>{$("dtxt").textContent=plainTextFrom(ta.value);};
   const sync=()=>{showD();prev.innerHTML=mdToHtml(ta.value);const ed=ta.value!==md;rs.disabled=!ed;$("cmsg").textContent=ed?t("MARKDOWN.EDITED"):"";};
   ta.addEventListener("input",()=>{
     const pos=ta.selectionStart, before=ta.value.slice(0,pos).split("\n"), line=before.length-1, col=before[line].length;
@@ -95,7 +95,7 @@ export function renderBody(all,y,mo){
     setTimeout(()=>{b.textContent=label;b.classList.remove("btn-ok");},2000);
   };};
   wire("copy",t("MARKDOWN.COPY"),()=>ta.value,()=>{ta.focus();ta.select();});
-  wire("copyd",t("MARKDOWN.COPY_DISCORD"),()=>discordFrom(ta.value),()=>{const r=document.createRange();r.selectNodeContents($("dtxt"));const s=getSelection();s.removeAllRanges();s.addRange(r);});
+  wire("copyd",t("MARKDOWN.COPY_TEXT"),()=>plainTextFrom(ta.value),()=>{const r=document.createRange();r.selectNodeContents($("dtxt"));const s=getSelection();s.removeAllRanges();s.addRange(r);});
   wire("copycsv",t("CSV.COPY"),()=>csv,()=>{const c=$("csv");c.focus();c.select();});
   showD();
   rs.onclick=()=>{ta.value=md;sync();};

@@ -42,7 +42,7 @@ export function recalcMd(text){
   }
   return L.join("\n");
 }
-export function discordFrom(text){
+export function plainTextFrom(text){
   const out=[],cells=l=>l.slice(1,-1).split(/(?<!\\)\|/).map(s=>s.trim().replace(/\\\|/g,"|"));
   let inSec=false;
   for(const l of text.split("\n")){

@@ -1,6 +1,6 @@
 # SP Hours Report
 
-A [Super Productivity](https://super-productivity.com) plugin that sums the month's tracked hours by project and task, and generates a Markdown report you can copy to Discord.
+A [Super Productivity](https://super-productivity.com) plugin that sums the month's tracked hours by project and task, and generates a Markdown report you can copy anywhere.
 
 ## Features
 
@@ -10,7 +10,7 @@ A [Super Productivity](https://super-productivity.com) plugin that sums the mont
 - **Report** tab: totals, calendar, weekly breakdown and per-project task and daily detail.
 - **Export** tab:
   - Markdown (English) with a live preview. Edit it and the totals recalculate.
-  - Discord-friendly text (no tables).
+  - Plain-text version without tables, for chats and editors that don't render them (Discord, Slack, etc.).
   - CSV, grouped by project, to paste into Excel or Google Sheets.
 - Interface in English and Spanish, following the app language.
 
