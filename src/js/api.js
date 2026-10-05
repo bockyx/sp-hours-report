@@ -3,7 +3,7 @@ import { state } from "./state.js";
 export function api(){return typeof PluginAPI!=="undefined"?PluginAPI:null;}
 export async function waitApi(){
   for(let i=0;i<100&&!api();i++) await new Promise(r=>setTimeout(r,50));
-  if(!api()) throw new Error("No encontré la API de plugins de Super Productivity.");
+  if(!api()) throw new Error("NO_API");
   return api();
 }
 export async function loadCfg(){

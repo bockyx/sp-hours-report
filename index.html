@@ -2,35 +2,35 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8" />
-<title>Reporte de horas ASD Media</title>
+<title>ASD Media</title>
 </head>
 <body>
 <div class="wrap">
   <header>
-    <div class="eyebrow" id="range">Reporte de horas</div>
-    <h1>Horas ASD Media</h1>
-    <p class="muted">Lee las horas registradas en Super Productivity, incluidas las tareas archivadas.</p>
+    <div class="eyebrow" id="range" data-i18n="HEADER.EYEBROW"></div>
+    <h1 data-i18n="HEADER.TITLE"></h1>
+    <p class="muted" data-i18n="HEADER.SUBTITLE"></p>
   </header>
 
   <div class="controls">
     <div class="row">
       <span class="month">
-        <button class="iconbtn" id="prevM" title="Mes anterior" aria-label="Mes anterior">‹</button>
-        <input type="month" id="month" aria-label="Mes" />
-        <button class="iconbtn" id="nextM" title="Mes siguiente" aria-label="Mes siguiente">›</button>
+        <button class="iconbtn" id="prevM" data-i18n-attr="title:CONTROLS.PREV_MONTH,aria-label:CONTROLS.PREV_MONTH">‹</button>
+        <input type="month" id="month" data-i18n-attr="aria-label:CONTROLS.MONTH" />
+        <button class="iconbtn" id="nextM" data-i18n-attr="title:CONTROLS.NEXT_MONTH,aria-label:CONTROLS.NEXT_MONTH">›</button>
       </span>
-      <label>Redondeo
+      <label><span data-i18n="CONTROLS.ROUNDING"></span>
         <select id="round">
-          <option value="0">Sin redondeo</option>
-          <option value="15">15 min hacia arriba</option>
-          <option value="30">30 min hacia arriba</option>
-          <option value="60">1 h hacia arriba</option>
+          <option value="0" data-i18n="CONTROLS.ROUND_NONE"></option>
+          <option value="15" data-i18n="CONTROLS.ROUND_15"></option>
+          <option value="30" data-i18n="CONTROLS.ROUND_30"></option>
+          <option value="60" data-i18n="CONTROLS.ROUND_60"></option>
         </select>
       </label>
-      <button id="refresh">Actualizar</button>
+      <button id="refresh" data-i18n="CONTROLS.REFRESH"></button>
     </div>
     <div class="pchips" id="pchips"></div>
-    <p class="muted" id="hint">El redondeo se aplica a cada tarea en cada día. Desmarca un proyecto para quitarlo del reporte y edita su nombre si quieres otro en el Markdown.</p>
+    <p class="muted" id="hint" data-i18n="CONTROLS.HINT"></p>
     <p class="msg" id="err" hidden></p>
   </div>
 

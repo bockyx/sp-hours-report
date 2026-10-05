@@ -1,5 +1,6 @@
 import { state } from "./state.js";
 import { PALETTE } from "./utils.js";
+import { t } from "./i18n.js";
 
 // Una entrada por tarea y día, solo tareas sin subtareas (igual que la exportación de la app)
 export function entries(){
@@ -15,7 +16,7 @@ export function entries(){
       if(!date.startsWith(state.month)||!ms) continue;
       let m=Math.round(ms/60000);
       if(f) m=Math.ceil(m/f)*f;
-      if(m>0) out.push({pid,date,title:(title||"(sin título)").trim(),min:m});
+      if(m>0) out.push({pid,date,title:(title||t("TABLE.UNTITLED")).trim(),min:m});
     }
   }
   return out;
@@ -23,7 +24,7 @@ export function entries(){
 export function projName(pid){
   if(state.cfg.names[pid]) return state.cfg.names[pid];
   const p=state.projectsById[pid];
-  return p?p.title:"Sin proyecto";
+  return p?p.title:t("PROJECT.NONE");
 }
 export function projColor(pid,i){
   const p=state.projectsById[pid], c=p&&p.theme&&p.theme.primary;

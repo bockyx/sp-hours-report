@@ -1,12 +1,9 @@
 export const MONTHS=["January","February","March","April","May","June","July","August","September","October","November","December"];
-export const MESES=["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
-export const DOW=["dom","lun","mar","mié","jue","vie","sáb"];
 export const PALETTE=["#2f5bd3","#d0731c","#17857a","#b43a86","#7a8a1c","#7a52c9"];
 export const $=id=>document.getElementById(id);
 export const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 export const hm=m=>Math.floor(m/60)+":"+String(m%60).padStart(2,"0");
 export const hmMd=m=>m%60?hm(m):String(m/60);
 export const dn=s=>+s.slice(8,10);
-export const dowOf=s=>new Date(s+"T12:00:00").getDay();
 export const pad=n=>String(n).padStart(2,"0");
 export const tint=c=>`color-mix(in srgb, ${c} 20%, transparent)`;
